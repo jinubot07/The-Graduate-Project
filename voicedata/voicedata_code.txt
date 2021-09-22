@@ -1,0 +1,17 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b8b5e4b6c27e23828acf622e624391e2" \
+-d '<speak>
+자세를 고쳐앉으세요.
+</speak>' > techneck_woman.mp3
+
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b8b5e4b6c27e23828acf622e624391e2" \
+-d '<speak>
+<voice name="MAN_DIALOG_BRIGHT">바른자세로 앉으세요.</voice> 
+</speak>' > techneck_man.mp3
+
+
+
+<voice name="WOMAN_DIALOG_BRIGHT" speechStyle="SS_ALT_FAST_1">금요일이 좋아요.</voice>
