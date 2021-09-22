@@ -1,0 +1,70 @@
+Welcome to the XWin X Server
+Vendor: Moba/X
+Release: 1.20.4.0
+OS: Windows 10  [Windows NT 10.0 build 19041] (WoW64)
+Package: version  built 2019-03-16
+
+XWin was started with the following command line:
+
+C:\Users\정진우\DOCUME~1\MobaXterm\slash\bin\XWin_MobaX.exe 
+ -silent-dup-error -notrayicon -nolisten inet6 -hostintitle +bs 
+ -clipboard -nowgl -multiwindow -noreset :0 
+
+ddxProcessArgument - Initializing default screens
+winInitializeScreenDefaults - primary monitor w 1920 h 1080
+winInitializeScreenDefaults - native DPI x 96 y 96
+(==) FontPath set to /usr/share/fonts/misc/
+(==) FontPath set to C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/misc/
+(==) FontPath set to /usr/share/fonts/TTF/
+(==) FontPath set to C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/TTF/
+(==) FontPath set to /usr/share/fonts/OTF/
+(==) FontPath set to C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/OTF/
+(==) FontPath set to /usr/share/fonts/Type1/
+(==) FontPath set to C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/Type1/
+(==) FontPath set to /usr/share/fonts/100dpi/
+(==) FontPath set to C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/100dpi/
+(==) FontPath set to /usr/share/fonts/75dpi/
+(==) FontPath set to C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/75dpi/
+(==) FontPath set to "C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/misc/,C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/TTF/,C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/OTF/,C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/Type1/,C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/100dpi/,C:\Users\정진우\DOCUME~1\MobaXterm\slash/usr/share/fonts/75dpi/"
+(==) Setting XKEYSYMDB path to XKEYSYMDB=C:\Users\정진우\DOCUME~1\MobaXterm\slash\usr\share\X11\XKeysymDB
+(==) Setting XERRORDB path to XERRORDB=C:\Users\정진우\DOCUME~1\MobaXterm\slash\usr\share\X11\XErrorDB
+(==) Setting XLOCALEDIR path to XLOCALEDIR=C:\Users\정진우\DOCUME~1\MobaXterm\slash\usr\share\X11\locale
+(==) Logfile set to "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\XWin.0.log"
+(==) Setting XKB path to C:\Users\정진우\DOCUME~1\MobaXterm\slash\usr\share\X11\xkb
+[258803.890] winDetectSupportedEngines - RemoteSession: no
+[258804.031] winDetectSupportedEngines - DirectDraw4 installed, allowing ShadowDDNL
+[258804.062] winDetectSupportedEngines - Returning, supported engines 00000005
+[258804.062] winSetEngine - Multi Window or Rootless => ShadowGDI
+[258804.062] winScreenInit - Using Windows display depth of 32 bits per pixel
+[258804.062] winAllocateFBShadowGDI - Creating DIB with width: 1920 height: 1080 depth: 32
+[258804.062] winFinishScreenInitFB - Masks: 00ff0000 0000ff00 000000ff
+[258804.062] winInitVisualsShadowGDI - Masks 00ff0000 0000ff00 000000ff BPRGB 8 d 24 bpp 32
+[258804.093] (II) IGLX: Loaded and initialized swrast
+[258804.093] (II) GLX: Initialized DRISWRAST GL provider for screen 0
+[258804.140] (II) [XKB]  "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\xkb_a13540" file successfully created.
+[258804.140] (II) [XKB]  Launching xkbcomp.exe with the following command:
+[258804.140] (II) [XKB]  "C:\Users\정진우\DOCUME~1\MobaXterm\slash\bin\xkbcomp_w32.exe" -w 1 "-RC:\Users\정진우\DOCUME~1\MobaXterm\slash\usr\share\X11\xkb" -xkm "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\xkb_a13540" -em1 "The XKEYBOARD keymap compiler (xkbcomp) reports:" -emp "> " -eml "Errors from xkbcomp are not fatal to the X server" "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\server-0.xkm"
+[258804.140] (II) [XKB]  LaunchXkbComp(II) :  succeeded
+[258804.218] (II) [XKB]  Successfully created keyboard mapping file "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\xkb_a13540"
+[258804.218] winPointerWarpCursor - Discarding first warp: 960 540
+[258804.218] (--) 16 mouse buttons found
+[258804.218] (--) Setting autorepeat to delay=500, rate=31
+[258804.218] (--) Windows keyboard layout: "00000412" (00000412) "Korean", type 8
+[258804.218] (--) Found matching XKB configuration "Korean"
+[258804.218] (--) Model = "kr106" Layout = "kr" Variant = "none" Options = "none"
+[258804.218] Rules = "base" Model = "kr106" Layout = "kr" Variant = "none" Options = "none"
+[258804.218] (II) [XKB]  "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\xkb_a13540" file successfully created.
+[258804.218] (II) [XKB]  Launching xkbcomp.exe with the following command:
+[258804.218] (II) [XKB]  "C:\Users\정진우\DOCUME~1\MobaXterm\slash\bin\xkbcomp_w32.exe" -w 1 "-RC:\Users\정진우\DOCUME~1\MobaXterm\slash\usr\share\X11\xkb" -xkm "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\xkb_a13540" -em1 "The XKEYBOARD keymap compiler (xkbcomp) reports:" -emp "> " -eml "Errors from xkbcomp are not fatal to the X server" "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\server-0.xkm"
+[258804.218] (II) [XKB]  LaunchXkbComp(II) :  succeeded
+[258804.281] (II) [XKB]  Successfully created keyboard mapping file "C:\Users\정진우\DOCUME~1\MobaXterm\slash\var\log\xwin\xkb_a13540"
+[258804.281] winInitMultiWindowWM - DISPLAY=127.0.0.1:0.0
+[258804.281] winMultiWindowXMsgProc - DISPLAY=127.0.0.1:0.0
+[258804.281] winInitMultiWindowWM - xcb_connect () returned and successfully opened the display.
+[258804.281] winProcEstablishConnection - winInitClipboard returned.
+[258804.281] winClipboardThreadProc - DISPLAY=127.0.0.1:0.0
+[258804.281] winMultiWindowXMsgProc - xcb_connect() returned and successfully opened the display.
+[258804.281] Using Composite redirection
+[258804.296] OS maintains clipboard viewer chain: yes
+[258804.296] winClipboardProc - XOpenDisplay () returned and successfully opened the display.
+[258810.046] winWindowProc - WM_EXITSIZEMOVE
