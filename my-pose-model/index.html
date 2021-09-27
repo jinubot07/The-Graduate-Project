@@ -8,6 +8,7 @@
 </head>
 <body>
     <div>Teachable Machine Pose Model</div>
+<!-- 시작하기 버튼-->
 <button type="button" onclick="init()">Start</button>
 <div><canvas id="canvas"></canvas></div>
 <div id="label-container"></div>
@@ -54,6 +55,8 @@
         await predict();
         window.requestAnimationFrame(loop);
     }
+    
+    var posture = "right"
 
     async function predict() {
         // Prediction #1: run input through posenet
