@@ -68,7 +68,7 @@
 
         // 카메라를 통해 인식된 자세에 따라 posture변수 초기화하기
         //  if : 바른자세인 경우, posture값을 "right"로 초기화
-        if(prediction[0].probability.toFixed(2) = 1.00 ){
+        if(prediction[0].probability.toFixed(2) == 1.00 ){
             posture = "right"
         }
         // else if : 거북목 인 경우, posture값을 "techneck"으로 초기화
