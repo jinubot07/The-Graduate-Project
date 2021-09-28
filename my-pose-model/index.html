@@ -56,9 +56,7 @@
         window.requestAnimationFrame(loop);
     }
     
-    var posture = "right"
-    var count = 0
-
+    
     async function predict() {
         // Prediction #1: run input through posenet
         // estimatePose can take in an image, video or canvas html element
@@ -66,21 +64,7 @@
         // Prediction 2: run input through teachable machine classification model
         const prediction = await model.predict(posenetOutput);
 
-        // 카메라를 통해 인식된 자세에 따라 posture변수 초기화하기
-        //  if : 바른자세인 경우, posture값을 "right"로 초기화
-        if(prediction[0].probability.toFixed(2) = 1.00 ){
-            posture = "right"
-        }
-        // else if : 거북목 인 경우, posture값을 "techneck"으로 초기화
-        else if (prediction[1].probability.toFixed(2) == 1.00){
-            // 바른자세였다가 거북목자세로 바뀌었을 때, count값 증가
-            if(posture == "right"){
-                count++
-                var audio = new Audio('../voicedata/home/바른자세로앉으세요_woman.mp3'); // count%10+'.mp3' 로 다양한 경고 음성 플레이
-                audio.play();
-            }
-            posture = "techneck"
-        }
+        
 
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
