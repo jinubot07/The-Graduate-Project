@@ -3,4 +3,5 @@
 
 We prevent the user from being in a bad posture while working on the computer.
 
-[demo](https://jinubot07.github.io/The-Graduate-Project-Tech-Neck-Alert/my-pose-model/index.html)
+[1st demo](https://jinubot07.github.io/The-Graduate-Project-Tech-Neck-Alert/my-pose-model/index.html)
+[2nd model(no_one classcnrk)](https://jinubot07.github.io/The-Graduate-Project-Tech-Neck-Alert/my-pose-model(2)_noone/index.html)
