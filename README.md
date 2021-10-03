@@ -14,7 +14,7 @@ login box, screen recording the user's posture, counts up on the same page
 
 final web page goal :
 
-main page : explain the program with service description, contact info, login box (pop up window : allow to access a camera)
+main page : explain the program with service description, contact info, login box (pop up window : allow to access a camera), toggle to chage the language
 first page : recording the user's posture
 second page : the user's history with graph
 thrd page : 
