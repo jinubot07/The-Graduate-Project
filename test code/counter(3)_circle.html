@@ -10,23 +10,35 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
     <link rel="stylesheet" href="./counter(3)_style.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+
 </head>
 <body>
-    <button type="button" onclick="count()">Click Me</button>
+    <!-- <button type="button" onclick="pluscnt()">Click Me</button>
+    <script>
+    function pluscnt(){
+        var count = 0;
+        count = count + 1;
+        $('#counter').html(count);
+    }   -->
 
+
+    </script>
     <div class="frame">
         <div>
           <div class="headline">
-                  <div>your daily progress</div>
-              </div>
+            <input type='button' onclick="countup()" value='CLICK ME'>
+            <div>클릭하여 카운트 업</div>                  
+          </div>
               <div class="circle-big">
-                  <div class="text">
-                    "cnt" <div class="small">번 클릭함</div>
-                  </div>
-                  <svg>
-                      <circle class="bg" cx="57" cy="57" r="52"></circle>
-                      <circle class="progress" cx="57" cy="57" r="52"></circle>
-                  </svg>
+                <div class="text">
+                <span id="counter">0</span><div class="small">번 클릭함</div>                    
+                </div>
+                <svg>
+                    <circle class="bg" cx="57" cy="57" r="52"></circle>
+                    <circle class="progress" cx="57" cy="57" r="52"></circle>
+                </svg>
               </div>
               <!-- <div class="circles-small">
                   <div class="circle-small">

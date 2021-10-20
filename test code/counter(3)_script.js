@@ -37,3 +37,17 @@ split = function (element) {
   textify('.fade','fade',4500);
   textify('.bounce','bounce',5500);
   textify('.dash2','fade',6500);
+
+  function countup()  {
+    // 결과를 표시할 element
+    const resultElement = document.getElementById('counter');
+    
+    // 현재 화면에 표시된 값
+    let number = resultElement.innerText;
+    
+    // 더하기
+      number = parseInt(number) + 1;
+    
+    // 결과 출력
+    resultElement.innerText = number;
+  }
