@@ -32,11 +32,12 @@
     <div class="frame">
         <div>
           <div class="headline">
-                  <div>your daily progress</div>
+                <div class="big">how many times did I have TECH NECK?</div>Counter
+                <!--<div>how many times did I have TECH NECK?</div>Counter-->
               </div>
               <div class="circle-big">
                   <div class="text">
-                      2002<div class="small">번</div>
+                    <span id="counter">0</span><div class="small">개</div>
                   </div>
                   <svg>
                       <circle class="bg" cx="57" cy="57" r="52"></circle>
@@ -123,11 +124,11 @@
         if(prediction[0].probability.toFixed(2) == 1.00 ){
             posture = "noone";
         }
-        else if(prediction[1].probability.toFixed(2) == 1.00 ){
+        else if(prediction[1].probability.toFixed(2) >= 0.90 ){
             posture = "right";
         }
         // else if : 거북목 인 경우, posture값을 "techneck"으로 초기화
-        else if (prediction[2].probability.toFixed(2) == 1.00){
+        else if (prediction[2].probability.toFixed(2) >= 0.90){
             // 바른자세였다가 거북목자세로 바뀌었을 때, count값 증가
             if(posture == "right"){
                 count++;
