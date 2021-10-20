@@ -87,9 +87,9 @@
 
         // Convenience function to setup a webcam
         const size = 200; // 웹캠 화면 크기
-        const flip = true; // whether to flip the webcam
-        webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
-        await webcam.setup(); // request access to the webcam
+        const flip = true; // 웹캠 활성화 여부
+        webcam = new tmPose.Webcam(size, size, flip); // 너비, 높이, flip
+        await webcam.setup(); // 웹캠 접근 요청
         await webcam.play();
         window.requestAnimationFrame(loop);
 
@@ -104,7 +104,7 @@
     }
 
     async function loop(timestamp) {
-        webcam.update(); // update the webcam frame
+        webcam.update(); // 실시간 입력 : 웹캠 무한 업데이트
         await predict();
         window.requestAnimationFrame(loop);
     }
