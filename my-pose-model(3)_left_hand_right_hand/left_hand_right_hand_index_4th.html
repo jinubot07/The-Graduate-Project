@@ -21,7 +21,7 @@
     <div class="frame">
         <div>
             <div class="headline">
-              <input type='button' onclick="countup()" value='CLICK ME for test'>
+              <!--<input type='button' onclick="countup()" value='CLICK ME for test'>-->
               <div class="big">how many times did I have TECH NECK?</div>                 
             </div>
             <div class="circle-big">
@@ -137,7 +137,7 @@
     // else if : 거북목 인 경우, posture값을 "techneck"으로 초기화
     else if (prediction[2].probability.toFixed(2) == 1.00){
         // 바른자세였다가 거북목자세로 바뀌었을 때, count값 증가
-        if(posture == "right"){
+        if(posture == "class2(left_hand)"){
             //count++;
             var audio = new Audio('../voicedata/home/바른자세로앉으세요_woman.mp3'); // count%10+'.mp3' 로 다양한 경고 음성 플레이
             audio.play();
