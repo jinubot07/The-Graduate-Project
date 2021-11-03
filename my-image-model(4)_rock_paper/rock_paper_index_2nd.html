@@ -77,12 +77,13 @@
     
         // the link to your model provided by Teachable Machine export panel
         const URL = "https://teachablemachine.withgoogle.com/models/tx_AT8tYO/";
-      
+        let model, webcam, ctx, labelContainer, maxPredictions;
+
+   
+        async function init() {
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
-            let model, webcam, ctx, labelContainer, maxPredictions;
-    
-        async function init() {
+
             // load the model and metadata
             // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
             // Note: the pose library adds a tmPose object to your window (window.tmPose)
@@ -104,6 +105,10 @@
                 canvas.width = size; canvas.height = size;
                 ctx = canvas.getContext("2d");
                 // pose Teachable Machine code end
+                
+                // img Teachable Machine code start
+                // document.getElementById("webcam-container").appendChild(webcam.canvas);
+                // img Teachable Machine code end
 
             labelContainer = document.getElementById("label-container");
             for (let i = 0; i < maxPredictions; i++) { // and class labels
@@ -111,6 +116,9 @@
             }
         }
     
+        // pose Teachable code : parameter timestamp
+        // img Teachable Machine code 에는 parameter없음 
+
         async function loop(timestamp) {
             webcam.update(); // update the webcam frame
             await predict();

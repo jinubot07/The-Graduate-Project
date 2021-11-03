@@ -77,12 +77,13 @@
     
         // the link to your model provided by Teachable Machine export panel
         const URL = "https://teachablemachine.withgoogle.com/models/tx_AT8tYO/";
-      
-            const modelURL = URL + "model.json";
-            const metadataURL = URL + "metadata.json";
-      let model, webcam, ctx, labelContainer, maxPredictions;
+        let model, webcam, ctx, labelContainer, maxPredictions;
+            
+   
     
         async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
             // load the model and metadata
             // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
             // Note: the pose library adds a tmPose object to your window (window.tmPose)
@@ -105,13 +106,19 @@
                 // ctx = canvas.getContext("2d");
                 // pose Teachable Machine code end
 
+            // img Teachable Machine code start
+            document.getElementById("webcam-container").appendChild(webcam.canvas);
+            // img Teachable Machine code end
+
             labelContainer = document.getElementById("label-container");
             for (let i = 0; i < maxPredictions; i++) { // and class labels
                 labelContainer.appendChild(document.createElement("div"));
             }
         }
     
-        async function loop(timestamp) {
+        // pose Teachable Machine code : parameter timestamp 있음
+        // img Teachable Machine code 에는 parameter없음 
+        async function loop() {
             webcam.update(); // update the webcam frame
             await predict();
             window.requestAnimationFrame(loop);
@@ -125,13 +132,13 @@
     
     
         async function predict() {
-            /*
+            /* pose Teachable Machine code Start
             // Prediction #1: run input through posenet
             // estimatePose can take in an image, video or canvas html element
             const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
             // Prediction 2: run input through teachable machine classification model
             const prediction = await model.predict(posenetOutput);
-            */
+            pose Teachable Machine code end*/
 
             // image Teachable Machine code start
             const prediction = await model.predict(webcam.canvas);
@@ -169,6 +176,9 @@
                 labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     
+
+
+        /* pose Teachable Machine code start
         // finally draw the poses
         drawPose(pose);
         }
@@ -184,7 +194,9 @@
                     tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
                 }
             }
+            pose Teachable Machine code end */
         }
+
     
     </script>
     </body>
