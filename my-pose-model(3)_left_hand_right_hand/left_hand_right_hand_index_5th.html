@@ -1,7 +1,7 @@
 <!-- class변환시 count값을 증가시키고 css를 통해 가시화한다.-->
 
 <!-- 거북목 감지하여 count값 증가시키는 조건을 좀 더 관대하게 : 
-    각 클래스의 예측 값 > 0.08 -->
+    각 클래스의 예측 값 > 0.80 -->
 
 
 <!DOCTYPE html>
@@ -115,7 +115,7 @@
 
    
     // 추가 code
-    var posture = "class2(left_hand)";
+    var posture = "class2(right_hand)";
     var count = 0;
 
 
@@ -135,18 +135,18 @@
         posture = "class1(no_one)";
     }
     else if(prediction[1].probability.toFixed(2) >= 0.80 ){
-        posture = "class2(left_hand)";
+        posture = "class2(right_hand)";
     }
     // else if : 거북목 인 경우, posture값을 "techneck"으로 초기화
     else if (prediction[2].probability.toFixed(2) >= 0.80){
         // 바른자세였다가 거북목자세로 바뀌었을 때, count값 증가
-        if(posture == "class2(left_hand)"){
+        if(posture == "class2(right_hand)"){
             //count++;
             var audio = new Audio('../voicedata/home/바른자세로앉으세요_woman.mp3'); // count%10+'.mp3' 로 다양한 경고 음성 플레이
             audio.play();
             countup();
         }
-        posture = "class3(right_hand)"
+        posture = "class3(left_hand)"
     }       
 
 
