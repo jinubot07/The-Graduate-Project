@@ -126,7 +126,7 @@
             }
         
             // 추가 code
-            var progress = 327
+            var progress = 327;
             var posture = "right";
             var count = 0;
     
@@ -154,14 +154,13 @@
                     audio.play();
                     
                     // 10회되면 원형 서클 초기화
-                    progress = progress-32.7
+                    progress = progress-32.7;
                     if(progress <= 0) {
-                        progress = 327-32.7
+                        progress = 327-32.7;
                     }
                     $('.progress').css('stroke-dashoffset', progress);
                     $('#counter').html(count);
                 }
-                
                 posture = "techneck"
     
                 for (let i = 0; i < maxPredictions; i++) {
