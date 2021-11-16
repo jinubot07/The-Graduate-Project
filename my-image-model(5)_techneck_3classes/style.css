@@ -1,8 +1,7 @@
 body {
-  /*  background: #632c65;*/
-  font: 20px/30px "Noto Sans CJK KR", Noto Sans KR, sans-serif;
+  background: #71ffd0;
+  font: 24px/30px "Noto Sans CJK KR", Noto Sans KR, sans-serif;
 }
-
 @import url(https://fonts.googleapis.co/css?family=montserrat:600,400,300);
 
 .frame {
@@ -16,8 +15,8 @@ body {
   border-radius: 3px;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
   overflow: hidden;
-  background: #413951;
-  background: linear-gradient(145deg, #413951 0%, #201c29 100%);
+  background: #85ff75;
+  background: linear-gradient(145deg, #85ff75 0%, #1c2af5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#413951", endColorstr="#201c29",GradientType=0 );
   color: #fff;
   font-family: "montserrat", Helvetica, sans-serif;
@@ -28,34 +27,10 @@ body {
   align-items: center;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .headline {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
-
-  font-weight: 600;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 22px;
-}
-
-.headline .big {
-  font-weight: 300;
-  font-size: 16px;
-}
-.circle-big {
-  position: relative;
-  width: 114px;
-  height: 114px;
-  margin: 30px auto 25px auto;
 }
 
 .circle-big {
@@ -79,7 +54,7 @@ body {
 .circle-big .progress {
   fill: none;
   stroke-width: 10px;
-  stroke: #9a0fe0;
+  stroke: #1af3bd;
   stroke-linecap: round;
   stroke-dasharray: 326.56;
   stroke-dashoffset: 60;
@@ -101,7 +76,7 @@ body {
 
 .circle-big .text .small {
   font-size: 14px;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .circles-small {
