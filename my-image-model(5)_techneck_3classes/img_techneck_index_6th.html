@@ -205,8 +205,10 @@
                     // const classPrediction =
                     //     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                     // labelContainer.childNodes[i].innerHTML = classPrediction;
-                    const item = data[prediction[i].className] //noone
-                    labelContainer.innerHTML = '${item.name}'
+                    if(prediction[i].probability.toFixed(2) >= 0.80){
+                        const item = data[prediction[i].className]
+                        labelContainer.innerHTML = '${item.name}'
+                    }
                 }
             }
         }
