@@ -1,4 +1,4 @@
-<!-- index_2nd   +  how many times did i have tech neck head tag  +  css -->
+<!-- index_3rd   + class보여지기  +  ref -->
 
 <!--class 1 : noone
     class 2 : right
@@ -12,25 +12,112 @@
     <!DOCTYPE html>
     <html lang="en">
     <head>
+           
+
+
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=, initial-scale=1.0">
         
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
 
-    <title>No More Nerd Neck</title>
-    
-    <!-- 추가 code -->
-    <!-- <link rel="stylesheet" href="./techneck_counter_style.css"> -->
-    <link rel="stylesheet" href="./style.css">
+        <title>No More Nerd Neck</title>
+        
+        <!-- 추가 code -->
+        <!-- <link rel="stylesheet" href="./techneck_counter_style.css"> -->
+        <link rel="stylesheet" href="./style.css">
 
     </head>
 
 
     <body>
+        <nav class="navbar navbar-expand-lg nav-distance py-2 navbar-dark bg-dark shadow-sm">
+            <div class="navbar-container">
+                <a href="#" class="navbar-brand">
+                <!-- Logo Image -->
+                <img src="neck.ico" width="10%" alt="" class="d-inline-block align-middle mr-2">
+                <!-- Logo Text -->
+                <span class="text-uppercase font-weight-bold align-middle">AI 거북목 알림 서비스</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="loading-background" style="display: none;">
+            <div class="loading-container">
+                <div class="loading"></div>
+                <div id="loading-text">loading</div>
+            </div>
+        </div>
+
+        <script>
+            function quit_loader(){
+                $(".loading-background").hide();
+    
+                // // 배경색 돌려놓기
+                // document.body.style.backgroundColor = '#ffffff' 
+                
+            };
+        </script>
+
+        <div>
+            <canvas id="canvas" width="300" height="300">
+            </canvas>
+        </div>
+
+        <!-- 가이드라인 이미지 -->
+        <img src="head_shoulder_guideline.png" id="head_shoulder_line_img" style="display:none">
+
+        <div id="label-container">
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+
+        <div class="flex-container">
+            <div>
+                <h6 class="switch-title">
+                    횟수 카운트
+                </h6>
+                <label class="switch">
+                    <!-- <input type="checkbox" onclick="sound_toggle(this)"> -->
+                    <input type="checkbox" id="count-toggle" checked="">
+                    <span class="slider round"></span>
+                </label>
+            </div>	
+
+            <div>
+                <h6 class="switch-title">
+                    소리 알림
+                </h6>
+                <label class="switch">
+                    <!-- <input type="checkbox" onclick="sound_toggle(this)"> -->
+                    <input type="checkbox" id="sound-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            
+            <div>
+                <h6 class="switch-title">
+                    진동 알림
+                </h6>
+                <label class="switch">
+                    <!-- <input type="checkbox" onclick="sound_toggle(this)"> -->
+                    <input type="checkbox" id="vibrate-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    
+
+
             <!-- 추가 code -->
             <div class="frame">
                 <div class="center">
@@ -90,7 +177,25 @@
             const URL = "https://teachablemachine.withgoogle.com/models/Qvy05_ssj/";
 
             let model, webcam, labelContainer, maxPredictions;
-        
+            // 추가 code (클래스 보이기)
+            const data = {
+                "noone" : {
+                    "name" : "인식된 사용자가 없습니다."
+
+                },
+
+                "right" : {
+
+                },
+                "techneck" : {
+
+
+                }
+
+            }
+
+
+
             // Load the image model and setup the webcam
             async function init() {
                 const modelURL = URL + "model.json";
@@ -111,6 +216,14 @@
                 await webcam.play();
                 window.requestAnimationFrame(loop);
         
+                // append/get elements to the DOM
+                const canvas = document.getElementById('canvas'); 
+                canvas.width = size;
+                canvas.height = size;
+                ctx = canvas.getContext('2d');
+                labelContainer = document.getElementById('label-container');
+
+
                 // append elements to the DOM
                 document.getElementById("webcam-container").appendChild(webcam.canvas);
                 labelContainer = document.getElementById("label-container");
