@@ -78,22 +78,14 @@
             // predict can take in an image, video or canvas html element
             const prediction = await model.predict(webcam.canvas);
             for (let i = 0; i < maxPredictions; i++) {
-<<<<<<< Updated upstream
-                const classPrediction =
-                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
-
-                const item = data[prediction[i].className]
-                labelContainer.innerHTML =${item.name}
-=======
                 // const classPrediction =
                 //     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                 // labelContainer.childNodes[i].innerHTML = classPrediction;
-                if(prediction[i].probability.toFixed(2) === 1.00){
+               
+                if(prediction[i].probability.toFixed(2) >= 0.80){
                     const item = data[prediction[i].className]
                     labelContainer.innerHTML = '${item.name}'
                 }
->>>>>>> Stashed changes
             }
         }
     </script>
