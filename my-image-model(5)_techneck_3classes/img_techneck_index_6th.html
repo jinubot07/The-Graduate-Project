@@ -178,8 +178,6 @@
             //  if : 바른자세인 경우, posture값을 "right"로 초기화
             if(prediction[0].probability.toFixed(2) >= 0.80 ){
                 posture = "noone";
-                const item = data[prediction[i].className] //noone
-                labelContainer.innerHTML = '${item.name}'
             }
             else if(prediction[1].probability.toFixed(2) >= 0.80 ){
                 posture = "right";
@@ -204,9 +202,11 @@
                 posture = "techneck"
     
                 for (let i = 0; i < maxPredictions; i++) {
-                    const classPrediction =
-                        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                    // const classPrediction =
+                    //     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                    // labelContainer.childNodes[i].innerHTML = classPrediction;
+                    const item = data[prediction[i].className] //noone
+                    labelContainer.innerHTML = '${item.name}'
                 }
             }
         }
