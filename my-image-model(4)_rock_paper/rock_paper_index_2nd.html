@@ -79,7 +79,20 @@
         const URL = "https://teachablemachine.withgoogle.com/models/tx_AT8tYO/";
         let model, webcam, ctx, labelContainer, maxPredictions;
 
-   
+        const data = {
+                "noone" : {
+                    "default" : "디폴트"
+
+                },
+                "right" : {
+                    "paper" : "보자기"
+
+                },
+                "techneck" : {
+                    "rock" : "주먹"
+
+                }
+            }
         async function init() {
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
@@ -173,6 +186,9 @@
                 const classPrediction =
                     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
+
+                const item = data[prediction[i].className]
+                labelContainer.innerHTML = '${item.name}'
         }
     
         // finally draw the poses
