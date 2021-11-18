@@ -1,4 +1,4 @@
-<!-- index_2nd   +  how many times did i have tech neck head tag  +  css -->
+<!-- index_3rd   +  terminate button  +  css -->
 
 <!--class 1 : noone
     class 2 : right
@@ -26,6 +26,7 @@
     <!-- 추가 code -->
     <!-- <link rel="stylesheet" href="./techneck_counter_style.css"> -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./button_test.css">
 
     </head>
 
@@ -62,13 +63,25 @@
         <!-- <script type="text/javascript" src="./techneck_counter_script.js"></script> -->
         
         <h1 >How many times did I have TECH NECK so far?</h1>
-        <div class="btn-container">
+        <!-- <div class="btn-container">
             <button type="button" onclick="init()">Start</button>
+            <button onClick="window.location.reload();">Terminate</button>
+        </div> -->
+
+  
+
+        <div class="container" id="container">
+            <div class="btn-container"> 
+              <button type="button" class="btn btn-start" id="btn-start" onclick="init()">
+                start
+              </button>
+              <button type="button" class="btn btn-terminate" id="btn-terminate" onClick="window.location.reload();">
+                terminate
+              </button>
+            </div> 
         </div>
 
 
-
-        
         <div id="webcam-container"></div>
 
         <div id="label-container"></div>

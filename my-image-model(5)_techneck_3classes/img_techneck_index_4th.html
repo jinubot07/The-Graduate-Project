@@ -18,13 +18,14 @@
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=, initial-scale=1.0">
+        <meta name="viewport" content="width=10, initial-scale=1.0">
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
-
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    
         <title>No More Nerd Neck</title>
         
         <!-- 추가 code -->
@@ -35,16 +36,16 @@
 
 
     <body>
-        <nav class="navbar navbar-expand-lg nav-distance py-2 navbar-dark bg-dark shadow-sm">
+        <!-- <nav class="navbar navbar-expand-lg nav-distance py-2 navbar-dark bg-dark shadow-sm">
             <div class="navbar-container">
                 <a href="#" class="navbar-brand">
-                <!-- Logo Image -->
+                <!-- Logo Image
                 <img src="neck.ico" width="10%" alt="" class="d-inline-block align-middle mr-2">
-                <!-- Logo Text -->
+                <!-- Logo Text 
                 <span class="text-uppercase font-weight-bold align-middle">AI 거북목 알림 서비스</span>
                 </a>
             </div>
-        </nav>
+        </nav> -->
 
         <div class="loading-background" style="display: none;">
             <div class="loading-container">
@@ -63,13 +64,13 @@
             };
         </script>
 
-        <div>
-            <canvas id="canvas" width="300" height="300">
-            </canvas>
-        </div>
-
+ 
         <!-- 가이드라인 이미지 -->
         <img src="head_shoulder_guideline.png" id="head_shoulder_line_img" style="display:none">
+        <div>
+            <canvas id="canvas" width="30" height="30">
+            </canvas>
+        </div>
 
         <div id="label-container">
             <div>
@@ -81,13 +82,12 @@
         </div>
 
 
-        <div class="flex-container">
+        <!-- <div class="flex-container">
             <div>
                 <h6 class="switch-title">
-                    횟수 카운트
+                    카운트
                 </h6>
                 <label class="switch">
-                    <!-- <input type="checkbox" onclick="sound_toggle(this)"> -->
                     <input type="checkbox" id="count-toggle" checked="">
                     <span class="slider round"></span>
                 </label>
@@ -98,7 +98,6 @@
                     소리 알림
                 </h6>
                 <label class="switch">
-                    <!-- <input type="checkbox" onclick="sound_toggle(this)"> -->
                     <input type="checkbox" id="sound-toggle">
                     <span class="slider round"></span>
                 </label>
@@ -106,16 +105,15 @@
             
             <div>
                 <h6 class="switch-title">
-                    진동 알림
+                    카톡 알림
                 </h6>
                 <label class="switch">
-                    <!-- <input type="checkbox" onclick="sound_toggle(this)"> -->
                     <input type="checkbox" id="vibrate-toggle">
                     <span class="slider round"></span>
                 </label>
             </div>
         </div>
-    
+     -->
 
 
             <!-- 추가 code -->
@@ -147,11 +145,15 @@
                 </div>
             </div>
             <!-- <script type="text/javascript" src="./techneck_counter_script.js"></script> -->
-            <div>Teachable Machine Image Model(5)_techneck</div>
+            <!--<div>Teachable Machine Image Model(5)_techneck</div> -->
             <h1>How many times did I have TECH NECK so far?</h1>
-        <button type="button" onclick="init()">Start</button>
-        <div id="webcam-container"></div>
-        <div id="label-container"></div>
+            <div>
+                
+                <button type="button" onclick="init()">Start</button>
+                <canvas id="canvas" width="20" height="20"></canvas>
+                <div id="webcam-container"></div>
+                <div id="label-container"></div>
+            </div>  
 
 
 
@@ -209,7 +211,7 @@
                 maxPredictions = model.getTotalClasses();
         
                 // Convenience function to setup a webcam
-                const size = 400;
+                const size =400;
                 const flip = true; // whether to flip the webcam
                 webcam = new tmImage.Webcam(size, size, flip); // width, height, flip
                 await webcam.setup(); // request access to the webcam
@@ -283,6 +285,29 @@
                 }
             }
         }
+        function drawPose(pose) {
+            if (webcam.canvas) {
+                ctx.drawImage(
+                    webcam.canvas,
+                    0,
+                    0,
+                    webcam.canvas.width,
+                    webcam.canvas.height
+                );
+                
+                // 가이드라인 그리기
+                var line_img = document.getElementById("head_shoulder_line_img")		
+                ctx.drawImage(
+                    line_img,
+                    0,
+                    0,
+                    webcam.canvas.width,
+                    webcam.canvas.height
+                );
+            }
+        }
+        
+
         </script>
         
         
