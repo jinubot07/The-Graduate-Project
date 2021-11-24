@@ -3,8 +3,7 @@
 
 We prevent the user from being in a bad posture while working on the computer.
 
-[1st demo](https://jinubot07.github.io/The-Graduate-Project/my-pose-model/index.html)
-[2nd model(no_one classcnrk)](https://jinubot07.github.io/The-Graduate-Project/my-pose-model(2)_noone/index.html)
+[Try Me](https://jinubot07.github.io/The-Graduate-Project/my-pose-model(6)_final/index_V2.html)
 
 
 test web page :
