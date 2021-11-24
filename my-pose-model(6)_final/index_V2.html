@@ -20,10 +20,45 @@
     <!-- 추가 code -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./button_test.css">
-    
+
 </head>
 <body>
+
+    <!-- 추가 code -->
+    <div class="frame">
+        <div class="center">
+            <div class="headline">
+                <!--<input type='button' onclick="countup()" value='CLICK ME for test'>-->
+                <div class="big">Tech Neck</div>Counter
+            </div>
+            <div class="circle-big">
+                <div class="text">
+                    <span id="counter">0</span><div class="small">번 거북목</div>                    
+            
+                    <!-- 실제 값이 증가했는지 확인 -->
+                    <script>
+                    //document.write(count+"<br/>");   
+                    //console.log(count) 
+                    </script>
+
+                </div>
+                <svg>
+                    <!-- 바깥 회색 동그라미 -->
+                    <circle class="bg" cx="57" cy="57" r="52"></circle>
+                    <!-- 안쪽 유색 동그라미 -->
+                    <circle class="progress" cx="57" cy="57" r="52"></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="./techneck_counter_script.js"></script> -->
+
+    <!--
     <div>Teachable Machine Pose Model</div>
+    -->
+    <h1>How many times did I have TECH NECK so far?</h1>
+
+    
 <button type="button" onclick="init()">Start</button>
 <div><canvas id="canvas"></canvas></div>
 <div id="label-container"></div>
