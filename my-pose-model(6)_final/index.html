@@ -210,8 +210,10 @@
                 //labelContainer.childNodes[i].innerHTML = classPrediction;
                 if(prediction[i].probability.toFixed(2) >= 0.80){
                     labelContainer.innerHTML = prediction[i].className
-                    const item = data[prediction[i].className]
-                    labelContainer.innerHTML = '${item.name}'
+                    console.log(prediction[i].className)
+                    document.write(prediction[i].className);
+                    //const item = new data[prediction[i].className]
+                    //labelContainer.innerHTML = '${item.name}'
                 }
             }
     
