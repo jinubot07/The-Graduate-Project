@@ -1,5 +1,5 @@
 # The Graduate Project : Tech Neck Alert
- Tech Neck Alert
+ No More Nerd Neck
 
 We prevent the user from being in a bad posture while working on the computer.
 
