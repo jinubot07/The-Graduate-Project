@@ -140,6 +140,13 @@
         window.requestAnimationFrame(loop);
     }
 
+
+    // 추가 code
+    var progress = 327;
+    var posture = "right";
+    var count = 0;
+
+    
     async function predict() {
         // Prediction #1: run input through posenet
         // estimatePose can take in an image, video or canvas html element
