@@ -30,7 +30,7 @@ body {
 #canvas {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 25%;
   width: 400px;
   height: 400px;
   margin-top: -200px;
