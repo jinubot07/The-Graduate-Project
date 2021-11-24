@@ -7,7 +7,7 @@ body {
 .frame {
   position: absolute;
   top: 50%;
-  left: 65%;
+  right: 35%;
   width: 400px;
   height: 400px;
   margin-top: -200px;
@@ -30,7 +30,7 @@ body {
 #canvas {
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 35%;
   width: 400px;
   height: 400px;
   margin-top: -200px;
@@ -41,11 +41,12 @@ body {
 h1 {
   text-align: center;
   font-family: "Roboto";
+  left: 35%;
 }
 
 .btn-container {
   height: 200px;
-  left: 40%;
+  left: 35%;
   position: relative;
   margin: 0;
   position: absolute;
