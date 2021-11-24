@@ -27,7 +27,7 @@ body {
   align-items: center;
 }
 
-#webcam-container {
+#canvas {
   position: absolute;
   top: 50%;
   left: 25%;
