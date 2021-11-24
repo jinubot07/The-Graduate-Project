@@ -198,6 +198,17 @@
     function drawPose(pose) {
         if (webcam.canvas) {
             ctx.drawImage(webcam.canvas, 0, 0);
+
+             // 가이드라인 그리기
+             var guide_line_img = document.getElementById("head_shoulder_line_img")		
+            ctx.drawImage(
+                guide_line_img,
+                0,
+                0,
+                webcam.canvas.width,
+                webcam.canvas.height
+            );
+
             // draw the keypoints and skeleton
             if (pose) {
                 const minPartConfidence = 0.5;
