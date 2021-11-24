@@ -58,10 +58,31 @@
     -->
     <h1>How many times did I have TECH NECK so far?</h1>
 
+    <!--         
+    <button type="button" onclick="init()">Start</button>
+    <div class="btn-container">
+    <button type="button" onclick="init()">Start</button>
+    <button onClick="window.location.reload();">Terminate</button>
+    </div>
+    -->
+    <div class="container" id="container">
+        <div class="btn-container"> 
+          <button type="button" class="btn btn-start" id="btn-start" onclick="init()">
+            start
+          </button>
+          <button type="button" class="btn btn-terminate" id="btn-terminate" onClick="window.location.reload();">
+            terminate
+          </button>
+        </div> 
+    </div>
     
-<button type="button" onclick="init()">Start</button>
-<div><canvas id="canvas"></canvas></div>
-<div id="label-container"></div>
+    <!-- 가이드라인 이미지 -->
+    <img src="head_shoulder_guideline3.png" id="head_shoulder_line_img" style="display:none" opacity: 0.6>
+        
+
+    <div><canvas id="canvas"></canvas></div>
+    <div id="label-container">앉은 상태에서 귀와 어깨를 화면에 표시된 가이드라인에 맞춰 노트북 화면의 기울기를 조정해주세요.</div>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
 <script type="text/javascript">
